@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "739e52a8-7213-4cef-a30e-ff555fcb61ef",
+		"name": "METMuseum API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/departments",
+					"protocol": "https",
+					"host": [
+						"collectionapi",
+						"metmuseum",
+						"org"
+					],
+					"path": [
+						"public",
+						"collection",
+						"v1",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "objects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate&departmentIds=3|9|12",
+					"protocol": "https",
+					"host": [
+						"collectionapi",
+						"metmuseum",
+						"org"
+					],
+					"path": [
+						"public",
+						"collection",
+						"v1",
+						"objects"
+					],
+					"query": [
+						{
+							"key": "metadataDate",
+							"value": null,
+							"description": "datetime e.g. YYYY-MM-DD / Returns any objects with updated data after this date"
+						},
+						{
+							"key": "departmentIds",
+							"value": "3|9|12",
+							"description": "integers that correspond to department IDs e.g. 1 or 3|9|12, delimited with the | character / Returns any objects in a specific department"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/object/[objectID]",
+					"protocol": "https",
+					"host": [
+						"collectionapi",
+						"metmuseum",
+						"org"
+					],
+					"path": [
+						"public",
+						"collection",
+						"v1",
+						"object",
+						"[objectID]"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/search?q&isHighlight&title&tags&departmentId&isOnView&medium&hasImages&geoLocation&dateBegin&dateEnd",
+					"protocol": "https",
+					"host": [
+						"collectionapi",
+						"metmuseum",
+						"org"
+					],
+					"path": [
+						"public",
+						"collection",
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": null,
+							"description": "Search term e.g. sunflowers / Returns a listing of all Object IDs for objects that contain the search query within the object’s data"
+						},
+						{
+							"key": "isHighlight",
+							"value": null,
+							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query and are designated as highlights. Highlights are selected works of art from The Met Museum’s permanent collection representing different cultures and time periods."
+						},
+						{
+							"key": "title",
+							"value": null,
+							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query, specifically searching against the title field for objects."
+						},
+						{
+							"key": "tags",
+							"value": null,
+							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query, specifically searching against the subject keyword tags field for objects."
+						},
+						{
+							"key": "departmentId",
+							"value": null,
+							"description": "Integer / Returns objects that are a part of a specific department. For a list of departments and department IDs, refer to our /department endpoint: https://collectionapi.metmuseum.org/public/collection/v1/departments"
+						},
+						{
+							"key": "isOnView",
+							"value": null,
+							"description": "Boolean, true or false. Case Sensitive. / Returns objects that match the query, specifically searching against the artist name or culture field for objects."
+						},
+						{
+							"key": "medium",
+							"value": null,
+							"description": "String, with multiple values separated by the | operator. Case Sensitive. / Returns objects that match the query and are of the specified medium or object type. Examples include: \"Ceramics\", \"Furniture\", \"Paintings\", \"Sculpture\", \"Textiles\", etc."
+						},
+						{
+							"key": "hasImages",
+							"value": null,
+							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query and have images."
+						},
+						{
+							"key": "geoLocation",
+							"value": null,
+							"description": "String, with multiple values separated by the | operator. Case Sensitive. / Returns objects that match the query and the specified geographic location. Examples include: \"Europe\", \"France\", \"Paris\", \"China\", \"New York\", etc.\n"
+						},
+						{
+							"key": "dateBegin",
+							"value": null,
+							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D.\n"
+						},
+						{
+							"key": "dateEnd",
+							"value": null,
+							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D."
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
