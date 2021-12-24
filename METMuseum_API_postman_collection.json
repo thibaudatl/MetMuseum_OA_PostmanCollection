@@ -34,7 +34,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate&departmentIds=3|9|12",
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2021-09-01&departmentIds=3|9|12",
 					"protocol": "https",
 					"host": [
 						"collectionapi",
@@ -50,7 +50,7 @@
 					"query": [
 						{
 							"key": "metadataDate",
-							"value": null,
+							"value": "2021-09-01",
 							"description": "datetime e.g. YYYY-MM-DD / Returns any objects with updated data after this date"
 						},
 						{
@@ -93,7 +93,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/search?q&isHighlight&title&tags&departmentId&isOnView&medium&hasImages&geoLocation&dateBegin&dateEnd",
+					"raw": "https://collectionapi.metmuseum.org/public/collection/v1/search?q=&isHighlight=false&title=false&tags=false&departmentId=6&medium=Paintings&hasImages=true",
 					"protocol": "https",
 					"host": [
 						"collectionapi",
@@ -109,58 +109,62 @@
 					"query": [
 						{
 							"key": "q",
-							"value": null,
+							"value": "",
 							"description": "Search term e.g. sunflowers / Returns a listing of all Object IDs for objects that contain the search query within the object’s data"
 						},
 						{
 							"key": "isHighlight",
-							"value": null,
+							"value": "false",
 							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query and are designated as highlights. Highlights are selected works of art from The Met Museum’s permanent collection representing different cultures and time periods."
 						},
 						{
 							"key": "title",
-							"value": null,
+							"value": "false",
 							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query, specifically searching against the title field for objects."
 						},
 						{
 							"key": "tags",
-							"value": null,
+							"value": "false",
 							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query, specifically searching against the subject keyword tags field for objects."
 						},
 						{
 							"key": "departmentId",
-							"value": null,
+							"value": "6",
 							"description": "Integer / Returns objects that are a part of a specific department. For a list of departments and department IDs, refer to our /department endpoint: https://collectionapi.metmuseum.org/public/collection/v1/departments"
 						},
 						{
 							"key": "isOnView",
 							"value": null,
-							"description": "Boolean, true or false. Case Sensitive. / Returns objects that match the query, specifically searching against the artist name or culture field for objects."
+							"description": "Boolean, true or false. Case Sensitive. / Returns objects that match the query, specifically searching against the artist name or culture field for objects.",
+							"disabled": true
 						},
 						{
 							"key": "medium",
-							"value": null,
+							"value": "Paintings",
 							"description": "String, with multiple values separated by the | operator. Case Sensitive. / Returns objects that match the query and are of the specified medium or object type. Examples include: \"Ceramics\", \"Furniture\", \"Paintings\", \"Sculpture\", \"Textiles\", etc."
 						},
 						{
 							"key": "hasImages",
-							"value": null,
+							"value": "true",
 							"description": "Boolean, true or false. Case sensitive. / Returns objects that match the query and have images."
 						},
 						{
 							"key": "geoLocation",
 							"value": null,
-							"description": "String, with multiple values separated by the | operator. Case Sensitive. / Returns objects that match the query and the specified geographic location. Examples include: \"Europe\", \"France\", \"Paris\", \"China\", \"New York\", etc.\n"
+							"description": "String, with multiple values separated by the | operator. Case Sensitive. / Returns objects that match the query and the specified geographic location. Examples include: \"Europe\", \"France\", \"Paris\", \"China\", \"New York\", etc.\n",
+							"disabled": true
 						},
 						{
 							"key": "dateBegin",
 							"value": null,
-							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D.\n"
+							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D.\n",
+							"disabled": true
 						},
 						{
 							"key": "dateEnd",
 							"value": null,
-							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D."
+							"description": "Integer. You must use both dateBegin and dateEnd / Returns objects that match the query and fall between the dateBegin and dateEnd parameters. Examples include: dateBegin=1700&dateEnd=1800 for objects from 1700 A.D. to 1800 A.D., dateBegin=-100&dateEnd=100 for objects between 100 B.C. to 100 A.D.",
+							"disabled": true
 						}
 					]
 				}
