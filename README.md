@@ -1,4 +1,4 @@
-# MetMuseum_OA_PostmanCollection
+# MetMuseum OpenAccess PostmanCollection
 
 Postman collection for the Metropolitan Museum API.
 
@@ -13,4 +13,10 @@ The collection provides a list of all the endpoints available, but also all the 
 - Have postman installed or go to https://web.postman.co/
 - Import the collection ("Workspace" -> "My workspace" -> "Import")
 
+
+## Documentations links
+### Postman documentation
 More information on how to import a collection on Postman documentation: https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman
+### Open Access Metropolitan museum API
+Documentation of the Open Access Metropolitan museum API: https://metmuseum.github.io/
+Github repo of the Open Access Metropolitan museum: https://github.com/metmuseum/openaccess
